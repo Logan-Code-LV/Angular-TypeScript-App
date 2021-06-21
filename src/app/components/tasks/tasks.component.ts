@@ -25,7 +25,6 @@ export class TasksComponent implements OnInit {
     task.reminder = !task.reminder
   }
   addTask(task: Task) {
-    TASKS.push(task)
-
+    this.tasks.push(task)
   }
 }

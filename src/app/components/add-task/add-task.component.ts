@@ -27,16 +27,16 @@ export class AddTaskComponent implements OnInit {
     if (!this.text) {
       alert('Please add a task!')
     }
-    const newTask = {
-      text: this.text,
-      day: this.day,
-      reminder: this.reminder
+    else {
+      const newTask = {
+        text: this.text,
+        day: this.day,
+        reminder: this.reminder
+      }
+      this.onAddTask.emit(newTask)
+      this.text = ""
+      this.day = ""
+      this.reminder = false
     }
-
-    this.onAddTask.emit(newTask)
-
-    this.text = ""
-    this.day = ""
-    this.reminder = false
   }
 }
